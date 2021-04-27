@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+
+{% block content %}
+
+	<div class="post_details">
+		<div class="post_info">
+			<h1>{{post.title}}</h1>
+
+
+			<div class="post_details_meta">
+
+				<p>Author: {{post.author}}| <a href="{% url 'post_edit' post.pk %}"> + Edit Post +</a>|
+					<a href="{% url 'post_delete' post.pk %}">+ Remove Post
+
+				 <a href="#">+ Remove +</a></p>
+			</div>
+			<div class="post_content">
+				
+				{{post.body}}
+			</div>
+
+		</div>
+
+
+	</div>
+
+
+{%endblock%}
